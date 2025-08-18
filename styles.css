@@ -12,7 +12,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: #000;
+    background-color: #0C091C;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@ body {
 }
 
 .logo {
-    width: 150px;
+    width: 220px;
 }
 
 /* Contenedor principal */
@@ -33,7 +33,7 @@ body {
 /* Sidebar */
 .sidebar {
     width: 250px;
-    background-color: #000;
+    background-color: #0C091C;
     padding: 20px;
     height: 100vh;
     position: fixed;
