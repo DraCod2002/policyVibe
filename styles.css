@@ -40,6 +40,8 @@ body {
     overflow-y: auto;
     border-right: 1px solid #222;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    top: 0; /* Asegura que esté en la parte superior */
+    left: 0; /* Asegura que esté en la izquierda */
 }
 
 .sidebar ul {
@@ -73,25 +75,39 @@ body {
     color: red;
 }
 
-/* Contenido principal */
+/* Contenido principal - AQUÍ ESTÁN LOS CAMBIOS PRINCIPALES */
 .content {
-    margin-left: 250px;
-    padding: 20px;
+    margin-left: 270px; /* Aumenté de 250px a 270px para dar más espacio */
+    padding: 40px 30px 20px 30px; /* Aumenté el padding izquierdo y superior */
     max-width: 800px;
     box-sizing: border-box;
     line-height: 1.6;
+    min-height: 100vh; /* Asegura que ocupe toda la altura */
 }
 
 /* Títulos */
 h1, h2 {
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Aumenté el margen inferior */
+    margin-top: 20px; /* Añadí margen superior */
+}
+
+h1 {
+    margin-top: 0; /* El primer título no necesita margen superior */
+    padding-top: 10px;
 }
 
 /* Párrafos */
 p {
     color: #ccc;
     font-size: 16px;
+    margin-bottom: 15px; /* Mejor espaciado entre párrafos */
+}
+
+/* Secciones */
+section {
+    margin-bottom: 30px; /* Más espacio entre secciones */
+    padding-right: 20px; /* Evita que el texto se pegue al borde */
 }
 
 /* Enlaces en el contenido */
@@ -108,6 +124,7 @@ p {
 /* Listas */
 ul {
     padding-left: 20px;
+    margin-bottom: 20px; /* Más espacio después de las listas */
 }
 
 li {
@@ -127,11 +144,22 @@ li {
         border-right: none;
         border-bottom: 1px solid #222;
         box-shadow: none;
+        top: auto;
+        left: auto;
     }
 
     .content {
         margin-left: 0;
-        padding: 15px;
+        padding: 20px 15px; /* Reducí el padding en móviles */
+        margin-top: 0;
+    }
+}
+
+/* Responsive para tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .content {
+        margin-left: 260px; /* Ligeramente menos margen en tablets */
+        padding: 30px 20px;
     }
 }
 
